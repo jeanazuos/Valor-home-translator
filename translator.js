@@ -51,10 +51,27 @@ if(document.getElementsByClassName("menu-exposto__itens__item theme-color-primar
 
 
 // Traduz rodapé
-document.getElementsByClassName("footer__sections__section__name")[0].innerText="Valor"
-document.getElementsByClassName("footer__sections__section__name")[1].innerText="Products"
-document.getElementsByClassName("footer__sections__section__name")[2].innerText="Reader Center"
-document.getElementsByClassName("footer__sections__section__name")[3].innerText="Follow us"
+rodape = document.getElementsByClassName("footer__sections__section__name")
+for(var i=0; i<rodape.length; i++){
+    if(rodape[i].textContent == "Valor"){
+        rodape[i].innerText="Valor"
+    }else if(rodape[i].textContent == "Produtos"){
+        rodape[i].innerText="Products"
+    }else if(rodape[i].textContent == "Central do Leitor"){
+        rodape[i].innerText="Reader Center"
+    }else if(rodape[i].textContent == "Siga o Valor"){
+        rodape[i].innerText="Follow us"
+    }else if(rodape[i].textContent == "Assine"){
+        rodape[i].firstElementChild.innerText="Subscribe"
+    }else if(rodape[i].textContent == " Anuncie "){
+        alert("entrei aqui")
+        rodape[i].firstElementChild.innerText="Advertise"
+    }else if(rodape[i].textContent == " Venda de conteúdo "){
+        rodape[i].firstElementChild.innerText="Selling content"
+    }
+}
+
+
 document.getElementsByClassName("footer__sections__section__name")[4].innerText="Subscribe"
 document.getElementsByClassName("footer__sections__section__name")[5].innerText="Advertise"
 document.getElementsByClassName("footer__sections__section__name")[6].innerText="Selling content"
