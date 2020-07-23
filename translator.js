@@ -64,7 +64,6 @@ for(var i=0; i<rodape.length; i++){
     }else if(rodape[i].textContent == "Assine"){
         rodape[i].firstElementChild.innerText="Subscribe"
     }else if(rodape[i].textContent == " Anuncie "){
-        alert("entrei aqui")
         rodape[i].firstElementChild.innerText="Advertise"
     }else if(rodape[i].textContent == " Venda de conteúdo "){
         rodape[i].firstElementChild.innerText="Selling content"
@@ -114,4 +113,56 @@ for(var i=0; i<filhos.length; i++){
         filhos[i].firstElementChild.innerText="Subscriber Portal"
     }
 
+}
+
+// Renomeia test-international para International
+document.getElementsByClassName("header__brand__sublink header__brand__sublink--sm")[0].innerText = "International"
+
+// Tradução do menu lateral
+traducao_login = "Log in with your account <br><small>or sign up for free</small>"
+document.getElementsByClassName("menu-product-color")[0].innerHTML = traducao_login
+
+
+if(document.getElementsByClassName("menu-item-title")){
+    editorias_laterais = document.getElementsByClassName("menu-item-title")
+
+    for(var i=0; i<editorias_laterais.length; i++){
+        if(editorias_laterais[i].textContent == "Home"){
+            editorias_laterais[i].innerText="Home"
+        }else if(editorias_laterais[i].textContent == "Ações"){
+            editorias_laterais[i].innerText="Stock Market"
+        }else if(editorias_laterais[i].textContent == "Cambial"){
+            editorias_laterais[i].innerText="Exchange"
+        }else if(editorias_laterais[i].textContent == "Multimercados"){
+            editorias_laterais[i].innerText="Multimarkets"
+        }else if(editorias_laterais[i].textContent == "Previdência"){
+            editorias_laterais[i].innerText="Social Security"
+        }else if(editorias_laterais[i].textContent == "Renda Fixa"){
+            editorias_laterais[i].innerText="Fixed Income"
+        }else if(editorias_laterais[i].textContent == "Política"){
+            editorias_laterais[i].innerText="Politcs"
+        }else if(editorias_laterais[i].textContent == "Finanças"){
+            editorias_laterais[i].innerText="Finances"
+        }else if(editorias_laterais[i].textContent == "Empresas"){
+            editorias_laterais[i].innerText="Companies"
+        }else if(editorias_laterais[i].textContent == "Agronegócios"){
+            editorias_laterais[i].innerText="Agribusiness"
+        }else if(editorias_laterais[i].textContent == "Internacional"){
+            editorias_laterais[i].innerText="International"
+        }else if(editorias_laterais[i].textContent == "Opinião"){
+            editorias_laterais[i].innerText="Opinion"
+        }else if(editorias_laterais[i].textContent == "Legislação"){
+            editorias_laterais[i].innerText="Legislation"
+        }else if(editorias_laterais[i].textContent == "Carreira"){
+            editorias_laterais[i].innerText="Career"
+        }else if(editorias_laterais[i].textContent == "Cultura & Estilo"){
+            editorias_laterais[i].innerText="Style & Culture"
+        }else if(editorias_laterais[i].textContent == "Conteúdo Publicitário"){
+            editorias_laterais[i].innerText="Advertising Content"
+        }else if(editorias_laterais[i].textContent == "Guia de Fundos"){
+            editorias_laterais[i].innerText="Fund Guide"
+        }
+    }
+}else{
+    console.log("Não foram encontradas editorias laterais para processamento")
 }
